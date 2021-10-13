@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage{fancyhdr, graphicx}
+\usepackage{layouts}
+\usepackage[a4paper]{geometry}
+\geometry{margin=1cm}
+
+\setmainfont{Calibri}[
+	SizeFeatures={Size=14},
+	WordSpace=1.05]
+
+\pagestyle{empty}
+
+\include{aux/style}
+\include{aux/usualcmds}
+\include{aux/commands}
+
+\title{\textsc{Effective constructions in algebraic topology \\ with applications to machine learning and lattice field theory}}
+
+\author{Anibal~M.~Medina-Mardones}
+
+\renewcommand{\baselinestretch}{1.825}
+
+\begin{document}
+	\thispagestyle{empty}
+	\fontsize{14}{1.15}
+
+	\includegraphics[width=7cm]{aux/logo1.png}
+	\hfill
+	\includegraphics[width=7cm]{aux/logo3.png}
+
+	\vspace*{1cm}
+
+	\begin{center}
+		\Large\textsc{Effective Constructions in Algebraic Topology \\ with Applications to Machine Learning and Lattice Field Theory} \par
+		\vspace*{10pt}
+		\Large\textit{Anibal M. Medina-Mardones}
+		\vspace*{-5pt}
+	\end{center}
+
+	\input{sec/introduction}
+	\input{sec/past}
+	\input{sec/future}
+	\input{sec/applications}
+	\newpage
+
+	\printbibliography
+\end{document}

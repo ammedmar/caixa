@@ -1,11 +1,12 @@
-\usepackage{amssymb}
+\usepackage{amsmath,amssymb,amsthm}
 \usepackage{tikz-cd}
 \usepackage{mathbbol} % changes \mathbb{} and adds more support
 \usepackage{csquotes}
 
 % bibliography
 \usepackage[backend=biber,
-	style=alphabetic,
+	style=numeric,
+	sorting=none,
 	backref=true,
 	url=false,
 	doi=false,
@@ -19,6 +20,8 @@
 
 \renewbibmacro{in:}{}  % don't display "in:" before the journal name
 \AtEveryBibitem{\clearfield{pages}}  % don't show page numbers
+
+\renewcommand*{\bibfont}{\fontsize{14}{2}\selectfont}
 
 % get titles hyperlinked
 \DeclareFieldFormat{title}{\myhref{\mkbibemph{#1}}}
@@ -72,9 +75,8 @@
 \crefname{subsection}{\subsectionSymbol\!}{subsections}
 
 % layout
-\addtolength{\textwidth}{0in}
-\addtolength{\textheight}{0in}
-\calclayout
+
+
 
 % update to MSC2020
 \makeatletter
